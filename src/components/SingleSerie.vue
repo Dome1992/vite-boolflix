@@ -3,7 +3,7 @@
 
 export default {
 
-    name: 'SingleMovie',
+    name: 'SingleSerie',
 
     props: {
         info: Object,
@@ -13,7 +13,7 @@ export default {
 </script>
 
 <template>
-    <!-- Inizia il Template del componente SingleMovie-->
+    <!-- Inizia il Template del componente SingleSerie-->
 
     <div class="movie">
         <!-- Aggiungi immagine utilizzando URL del film -->

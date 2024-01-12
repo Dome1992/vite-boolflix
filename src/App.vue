@@ -5,6 +5,7 @@ import axios from 'axios'
 // importo componete figlio 
 import AppHeader from './components/AppHeader.vue';
 import MovieList from './components/MovieList.vue'
+import SerietvList from './components/SerietvList.vue'
 
 
 // importo store da store.js
@@ -13,7 +14,8 @@ import { store } from './store.js';
 export default {
   components: {
     AppHeader,
-    MovieList
+    MovieList,
+    SerietvList,
 
 
   },
@@ -57,11 +59,30 @@ export default {
         
       }
     },
+    searchSeries () {
+      if (store.searchText.trim() !== '') {
+
+        axios
+        .get(`${store.serietvapiURL}&query=${store.searchText}`)
+        .then((res => {
+
+          console.log(res.data.results);
+          store.serietvapiURL = res.data.results;
+
+        }))
+        .catch((err) => {
+          console.log("Errore", err);
+        });
+        
+        
+      }
+    },
   },
 
   created () {
     this.getMovies ();
     this.searchMovies();
+    this.searchSeries();
   }
 }
 
@@ -70,11 +91,12 @@ export default {
 
 <template>
   <header>
-    <AppHeader @filter="searchMovies" />
+    <AppHeader @filter="searchMovies"  />
   </header>
   
   <main>
     <MovieList />
+    <SerietvList />
   </main>
  
 </template>
