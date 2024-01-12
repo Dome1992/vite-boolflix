@@ -67,7 +67,7 @@ export default {
         .then((res => {
 
           console.log(res.data.results);
-          store.serietvapiURL = res.data.results;
+          store.serietvList = res.data.results;
 
         }))
         .catch((err) => {
