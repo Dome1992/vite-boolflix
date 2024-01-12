@@ -17,7 +17,7 @@ export default {
 
     <div class="movie">
         <!-- Aggiungi immagine utilizzando URL del film -->
-        <img class="img-fluid mb-3" :src="info.poster_path[0].image_url" :alt="info.name">
+        <img class="img-fluid mb-3" :src="info.poster_path" :alt="info.name">
         <h4>{{ info.original_title }}</h4>
 
     </div>

@@ -30,7 +30,7 @@ export default {
 
         <div class="row">
 
-            <div v-for="movie in store.SingleMovie" :key="movie.id" class="col-6 col-md-4 col-lg-3 mb-5">
+            <div v-for="movie in store.movieList" :key="movie.id" class="col-6 col-md-4 col-lg-3 mb-5">
 
             <!-- Utilizza il componente 'SingleMovie' e passa le informazioni del film -->
             <SingleMovie :info="movie"/>
