@@ -17,8 +17,8 @@ export default {
 
     <div class="movie">
         <!-- Aggiungi immagine utilizzando URL del film -->
-        <img class="img-fluid mb-3" :src="info.poster_path" :alt="info.name">
-        <h4>{{ info.original_title }}</h4>
+        <img class="img-fluid mb-3" :src=" 'https://image.tmdb.org/t/p/w342/${info.poster_path}'" :alt="info.name">
+        <h4>{{ info.title  }}</h4>
 
     </div>
 </template>

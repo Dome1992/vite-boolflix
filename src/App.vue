@@ -69,7 +69,10 @@ export default {
 </script>
 
 <template>
-  <AppHeader @filter="searchMovies" />
+  <header>
+    <AppHeader @filter="searchMovies" />
+  </header>
+  
   <main>
     <MovieList />
   </main>
@@ -79,6 +82,9 @@ export default {
 <style lang="scss">
 @use './styles/general.scss';
 
+header {
+  background-color: black;
+}
 main {
   padding-top: 20px;
   background-color: rgb(24, 23, 23);
