@@ -77,11 +77,11 @@ export default {
 </template>
 
 <style lang="scss">
-//@use './styles/general.scss';
+@use './styles/general.scss';
 
 main {
   padding-top: 20px;
-  
+  background-color: rgb(24, 23, 23);
 }
 
 </style>
