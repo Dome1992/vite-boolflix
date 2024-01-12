@@ -6,8 +6,8 @@ export default {
     name: 'SingleMovie',
 
     props: {
-        info: Object
-    }
+        info: Object,
+    },
 
 }
 </script>

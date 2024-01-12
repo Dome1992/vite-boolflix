@@ -2,6 +2,7 @@
 import { store } from '../store';
 
 export default {
+    name: 'AppHeader',
     data (){
         return {
             store,
@@ -23,10 +24,6 @@ export default {
     </div>
 
      
-        
-        
-    
-   
 </template>
 
 <style lang="scss" scoped>

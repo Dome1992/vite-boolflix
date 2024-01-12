@@ -13,7 +13,7 @@ export default {
 
     // Componenti utilizzati all interno del componente MovieList, in questo caso SingelMovie
     components: {
-        SingleMovie
+        SingleMovie,
     },
 
     data () {

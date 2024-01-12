@@ -37,12 +37,31 @@ export default {
         }))
         .catch((err) => {
           console.log("Errore", err);
-        })
+        });
+    },
+    searchMovies () {
+      if (store.searchText.trim() !== '') {
+
+        axios
+        .get(`${store.apiURL}&query=${store.searchText}`)
+        .then((res => {
+
+          console.log(res.data.results);
+          store.movieList = res.data.results;
+
+        }))
+        .catch((err) => {
+          console.log("Errore", err);
+        });
+        
+        
+      }
     },
   },
 
   created () {
     this.getMovies ();
+    this.searchMovies();
   }
 }
 
@@ -50,7 +69,7 @@ export default {
 </script>
 
 <template>
-  <AppHeader @filter="getMovies" />
+  <AppHeader @filter="searchMovies" />
   <main>
     <MovieList />
   </main>
