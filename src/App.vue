@@ -4,6 +4,7 @@ import axios from 'axios'
 
 // importo componete figlio 
 import AppHeader from './components/AppHeader.vue';
+import MovieList from './components/MovieList.vue'
 
 
 // importo store da store.js
@@ -12,7 +13,8 @@ import { store } from './store.js';
 export default {
   components: {
     AppHeader,
-    
+    MovieList
+
 
   },
   data() {
@@ -50,7 +52,7 @@ export default {
 <template>
   <AppHeader @filter="getMovies" />
   <main>
-    
+    <MovieList />
   </main>
  
 </template>
